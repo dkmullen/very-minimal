@@ -28,5 +28,42 @@
       navigations that rely on <a href="#">HTML and are enhanced</a> with CSS
       view transitions (and a dash of JS if/where prudent).
     </p>
+
+    <div>
+      <label for="editor">Start typing here...</label>
+      <div id="editor" contenteditable="true"></div>
+    </div>
+
+    <label for="colorSelector">Change background color of the div above</label>
+    <input type="color" name="themeColor" id="colorSelector" value="#ffffff" />
+
+    <form id="profile">
+      <label for="name">Name</label>
+      <input id="name" name="name" />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const editor = document.querySelector("#editor");
+      editor.addEventListener("input", () => {
+        localStorage.setItem("draft", editor.innerHTML);
+      });
+      
+      const form = document.querySelector("#profile");
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const payload = Object.fromEntries(data.entries());
+        console.log(payload);
+      });
+      
+      const colorSelector = document.querySelector("#colorSelector");
+      colorSelector.addEventListener("input", () => {
+        editor.style.backgroundColor = colorSelector.value;
+      });
+
+    </script>
   </body>
 </html>

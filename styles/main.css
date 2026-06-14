@@ -1,5 +1,9 @@
 :root {
   --accent: green;
+  --accent-transparent: rgba(0, 128, 0, 0.3);
+}
+body::selection {
+  background-color: var(--accent-transparent);
 }
 body {
   max-width: 750px;
@@ -17,6 +21,8 @@ body {
   font-size: 1.3em;
   line-height: 1.3;
   color: #333333;
+  caret-color: var(--accent);
+  caret-shape: block;
 }
 
 a,
@@ -32,4 +38,12 @@ a.navlink {
 }
 .menu svg {
   fill: var(--accent);
+}
+#editor {
+  border: 1px solid lightcoral;
+  border-radius: 8px;
+  min-height: 100px;
+  min-width: 200px;
+  padding: 1rem;
+  padding-top: 8px;
 }

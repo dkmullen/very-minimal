@@ -34,7 +34,7 @@ a.navlink {
 }
 .menu {
   display: flex !important;
-  justify-content: end;
+  justify-content: space-between;
 }
 .menu svg {
   fill: var(--accent);

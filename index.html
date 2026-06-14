@@ -1,69 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <title>Experiment</title>
-  </head>
-  <body>
-    <div class="menu">
-      <a href="menu.html">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          viewBox="0 -960 960 960"
-          width="40px"
-          fill="#1f1f1f"
-        >
-          <path
-            d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
-          />
-        </svg>
-      </a>
-    </div>
-    <h1>Welcome to the experiment</h1>
-    <p>
-      Avoid in-page interactions that require JavaScript in favor of multi-page
-      navigations that rely on <a href="#">HTML and are enhanced</a> with CSS
-      view transitions (and a dash of JS if/where prudent).
-    </p>
 
-    <div>
-      <label for="editor">Start typing here...</label>
-      <div id="editor" contenteditable="true"></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <title>Experiment</title>
+</head>
 
-    <label for="colorSelector">Change background color of the div above</label>
-    <input type="color" name="themeColor" id="colorSelector" value="#ffffff" />
+<body>
+  <div class="menu">
+    <a href="#">DKM</a>
+    <a href="menu.html">
+      <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f">
+        <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+      </svg>
+    </a>
+  </div>
+  <h1>Welcome to the experiment</h1>
+  <p>
+    Avoid in-page interactions that require JavaScript in favor of multi-page
+    navigations that rely on <a href="#">HTML and are enhanced</a> with CSS
+    view transitions (and a dash of JS if/where prudent).
+  </p>
 
-    <form id="profile">
-      <label for="name">Name</label>
-      <input id="name" name="name" />
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" />
-      <button type="submit">Submit</button>
-    </form>
+  <div>
+    <label for="editor">Start typing here...</label>
+    <div id="editor" contenteditable="true"></div>
+  </div>
 
-    <script>
-      const editor = document.querySelector("#editor");
-      editor.addEventListener("input", () => {
-        localStorage.setItem("draft", editor.innerHTML);
-      });
-      
-      const form = document.querySelector("#profile");
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        const data = new FormData(form);
-        const payload = Object.fromEntries(data.entries());
-        console.log(payload);
-      });
-      
-      const colorSelector = document.querySelector("#colorSelector");
-      colorSelector.addEventListener("input", () => {
-        editor.style.backgroundColor = colorSelector.value;
-      });
+  <label for="colorSelector">Change background color of the div above</label>
+  <input type="color" name="themeColor" id="colorSelector" value="#ffffff" />
 
-    </script>
-  </body>
+  <form id="profile">
+    <label for="name">Name</label>
+    <input id="name" name="name" />
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const editor = document.querySelector("#editor");
+    editor.addEventListener("input", () => {
+      localStorage.setItem("draft", editor.innerHTML);
+    });
+    
+    const form = document.querySelector("#profile");
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const payload = Object.fromEntries(data.entries());
+      console.log(payload);
+    });
+    
+    const colorSelector = document.querySelector("#colorSelector");
+    colorSelector.addEventListener("input", () => {
+      editor.style.backgroundColor = colorSelector.value;
+    });
+
+  </script>
+</body>
+
 </html>

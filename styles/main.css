@@ -1,5 +1,5 @@
 :root {
-  --accent: green;
+  --accent: rgb(30, 153, 30);
   --accent-transparent: rgba(0, 128, 0, 0.3);
 }
 body::selection {
@@ -8,6 +8,7 @@ body::selection {
 body {
   max-width: 750px;
   margin: auto;
+  padding: 1rem;
   font-family:
     system-ui,
     -apple-system,
@@ -23,6 +24,11 @@ body {
   color: #333333;
   caret-color: var(--accent);
   caret-shape: block;
+}
+
+body.dark {
+  background-color: #333333;
+  color: #eeeeee;
 }
 
 a,

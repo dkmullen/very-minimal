@@ -1,6 +1,6 @@
 :root {
-  --accent: rgb(30, 153, 30);
-  --accent-transparent: rgba(0, 128, 0, 0.3);
+  --accent: rgb(111, 207, 151);
+  --accent-transparent: rgba(111, 207, 151, 0.3);
 }
 body::selection {
   background-color: var(--accent-transparent);
@@ -23,11 +23,11 @@ body {
   line-height: 1.3;
   color: #333333;
   caret-color: var(--accent);
-  caret-shape: block;
+  /* caret-shape: block; */
 }
 
 body.dark {
-  background-color: #333333;
+  background-color: #113c35;
   color: #eeeeee;
 }
 
@@ -46,7 +46,7 @@ a.navlink {
   fill: var(--accent);
 }
 #editor {
-  border: 1px solid lightcoral;
+  border: 1px solid var(--accent);
   border-radius: 8px;
   min-height: 100px;
   min-width: 200px;

@@ -23,9 +23,9 @@ body {
   line-height: 1.3;
   color: #333333;
   caret-color: var(--accent);
+  accent-color: var(--accent);
   /* caret-shape: block; */
 }
-
 body.dark {
   background-color: #113c35;
   color: #eeeeee;

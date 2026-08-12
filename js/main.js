@@ -32,3 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
   changeThemeIcon();
 });
 // ----------------------------------------------------------------
+function playAudio() {
+  let audio = new Audio("assets/audio/gargamel10-boink-cartoon-sound-effect-379724.mp3");
+  audio.play();
+}

@@ -1,0 +1,29 @@
+---
+title: Menu
+layout: layout.njk
+---
+
+<h1>Menu</h1>
+<ul>
+  <li><a class="navlink" href="/">Home</a></li>
+  <li><a class="navlink" href="/page1">Page 1</a></li>
+  <li><a class="navlink" href="/page2">Page 2</a></li>
+</ul>
+
+<script>
+  // Override the menu button behavior to close the menu
+  const menuBtn = document.querySelector(".menu a[href='/menu']");
+  if (menuBtn) {
+    menuBtn.parentElement.parentElement.replaceWith(
+      Object.assign(document.createElement("button"), {
+        className: "navlink",
+        innerHTML: `<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f">
+          <path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+        </svg>`,
+        title: "Close menu (back)",
+        ariaLabel: "Close menu (back)",
+        onclick: () => document.referrer ? history.back() : (window.location.href = "/")
+      })
+    );
+  }
+</script>

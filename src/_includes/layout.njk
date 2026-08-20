@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <title>P2</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/main.css" />
+  <title>{{ title }}</title>
 </head>
 
 <body class="dark">
   <div class="menu">
-    <a href="index.html">DKM</a>
+    <a href="/">DKM</a>
     <div>
       <svg class="icon-btn" id="theme-toggle" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
         width="40px" fill="#1f1f1f">
@@ -20,24 +24,17 @@
           d="M574.33-385.67q39-39 39-94.33t-39-94.33q-39-39-94.33-39t-94.33 39q-39 39-39 94.33t39 94.33q39 39 94.33 39t94.33-39ZM338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-446.67H40v-66.66h160v66.66Zm720 0H760v-66.66h160v66.66ZM446.67-760v-160h66.66v160h-66.66Zm0 720v-160h66.66v160h-66.66ZM260-655.33l-100.33-97 47.66-49 96 100-43.33 46Zm493.33 496-97.66-100.34 45-45.66 99.66 97.66-47 48.34Zm-98.66-541.34 97.66-99.66 49 47L702-656l-47.33-44.67ZM159.33-207.33 259-305l46.33 45.67-97.66 99.66-48.34-47.66ZM480-480Z" />
       </svg>
 
-      <a href="menu.html">
+      <a href="/menu">
         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f">
           <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
         </svg>
       </a>
     </div>
   </div>
-  <h1>Welcome to P2</h1>
-  <p>You've probably never heard of them — they were big before they sold out. The menu changes daily based on what the
-    forager brings in from the mountains. She grew her own heirloom tomatoes and felt personally betrayed by the sun.
-    Craft
-    beer is not just a beverage — it is a lifestyle rooted in intention. I prefer my oat milk locally oated, if that's
-    not too much to ask. We refuse to use anything that cannot be traced to its origin story.
-  </p>
-  <script src="js/main.js"></script>
-  <script>
-    setInterval(playAudio, 10000);
-  </script>
+
+  {{ content | safe }}
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

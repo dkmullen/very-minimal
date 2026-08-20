@@ -45,6 +45,26 @@ a.navlink {
 .menu svg {
   fill: var(--accent);
 }
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.menu-header h1 {
+  margin: 0;
+}
+.menu-header button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu-header button svg {
+  fill: var(--accent);
+}
 #editor {
   border: 1px solid var(--accent);
   border-radius: 8px;

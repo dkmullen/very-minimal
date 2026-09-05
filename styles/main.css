@@ -10,21 +10,18 @@ body {
   margin: auto;
   padding: 1rem;
   font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
-  font-size: 1.3em;
+  'Avenir Next',
+  'HelveticaNeue-Light', 
+  'Helvetica Neue', 
+  Helvetica, 
+  Arial, sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji";
+  font-size: 1.125em;
   line-height: 1.3;
   color: #333333;
   caret-color: var(--accent);
   accent-color: var(--accent);
-  /* caret-shape: block; */
 }
 body.dark {
   background-color: #113c35;
@@ -72,4 +69,13 @@ a.navlink {
   min-width: 200px;
   padding: 1rem;
   padding-top: 8px;
+}
+
+article {
+  width: 95vw;
+  max-width: 620px;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
 }
